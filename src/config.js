@@ -25,7 +25,6 @@ module.exports = {
   },
 
   // ── Meslek Rolleri ───────────────────────────────────────────
-  // Bu rolleri Discord'da oluşturup ID'lerini .env'e gireceksin
   meslekRolleri: [
     {
       label: '🎨 Web Designer',
@@ -40,16 +39,16 @@ module.exports = {
       envKey: 'ROL_GAME_DESIGNER',
     },
     {
-      label: '⚙️ Backend Developer',
-      value: 'backend_dev',
-      description: 'Sunucu tarafı geliştirme',
-      envKey: 'ROL_BACKEND_DEV',
+      label: '🧠 Machine Learning',
+      value: 'machine_learning',
+      description: 'Makine öğrenmesi ve veri bilimi',
+      envKey: 'ROL_MACHINE_LEARNING',
     },
     {
-      label: '💻 Frontend Developer',
-      value: 'frontend_dev',
-      description: 'İstemci tarafı geliştirme',
-      envKey: 'ROL_FRONTEND_DEV',
+      label: '🔧 Embedded Software',
+      value: 'embedded_software',
+      description: 'Gömülü sistemler ve donanım yazılımı',
+      envKey: 'ROL_EMBEDDED_SOFTWARE',
     },
     {
       label: '📱 Mobile Developer',
@@ -58,22 +57,40 @@ module.exports = {
       envKey: 'ROL_MOBILE_DEV',
     },
     {
-      label: '🖌️ UI/UX Designer',
-      value: 'uiux_designer',
-      description: 'Kullanıcı deneyimi ve arayüz tasarımı',
-      envKey: 'ROL_UIUX_DESIGNER',
+      label: '🔒 Cybersecurity',
+      value: 'cybersecurity',
+      description: 'Siber güvenlik ve etik hacking',
+      envKey: 'ROL_CYBERSECURITY',
     },
     {
-      label: '📹 Content Creator',
-      value: 'content_creator',
-      description: 'İçerik üretimi ve yayıncılık',
-      envKey: 'ROL_CONTENT_CREATOR',
+      label: '🖥️ Desktop Developer',
+      value: 'desktop_dev',
+      description: 'Masaüstü uygulama geliştirme',
+      envKey: 'ROL_DESKTOP_DEV',
     },
     {
-      label: '🔮 Other',
-      value: 'other',
-      description: 'Diğer / Henüz karar vermedim',
-      envKey: 'ROL_OTHER',
+      label: '🤖 AI Developer',
+      value: 'ai_dev',
+      description: 'Yapay zeka geliştirme',
+      envKey: 'ROL_AI_DEV',
+    },
+    {
+      label: '🗄️ Database Developer',
+      value: 'database_dev',
+      description: 'Veritabanı tasarımı ve yönetimi',
+      envKey: 'ROL_DATABASE_DEV',
+    },
+    {
+      label: '💻 Frontend Developer',
+      value: 'frontend_dev',
+      description: 'İstemci tarafı geliştirme',
+      envKey: 'ROL_FRONTEND_DEV',
+    },
+    {
+      label: '⚙️ Backend Developer',
+      value: 'backend_dev',
+      description: 'Sunucu tarafı geliştirme',
+      envKey: 'ROL_BACKEND_DEV',
     },
   ],
 
