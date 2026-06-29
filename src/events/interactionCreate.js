@@ -103,10 +103,7 @@ module.exports = {
         });
       }
 
-      // Önce mevcut ephemeral mesajı temizle
-      await interaction.update({ components: [] });
-
-      // Kayıt tamamla
+      // Kayıt tamamla (interaction zaten update ile acknowledge edildi)
       await kayitTamamla(interaction, oturum.secilenRoller, kayitOturumlari);
       return;
     }

@@ -22,7 +22,8 @@ const {
  * @param {Map}      kayitOturumlari      - Geçici oturum deposu
  */
 async function kayitTamamla(interaction, secilenRolDegerleri, kayitOturumlari) {
-  await interaction.deferReply({ ephemeral: true });
+  // Button interaction: deferUpdate ile acknowledge et (ephemeral mesajı günceller)
+  await interaction.deferUpdate();
 
   const member = interaction.member;
   const guild  = interaction.guild;
