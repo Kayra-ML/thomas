@@ -1,162 +1,86 @@
-# Discord Kayıt Botu 🤖
+<div align="center">
 
-Thomas Anderson sunucusu için geliştirilmiş otomatik kayıt sistemi.
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:00ff41,100:000000&height=200&section=header&text=Thomas%20Bot&fontSize=70&fontColor=00ff41&fontAlignY=38&desc=Discord%20Registration%20%26%20Automation&descAlignY=55&descAlign=50&animation=twinkling" />
 
-## Özellikler
+<br/>
 
-- ✅ Sunucuya katılınca otomatik `Kayıtsız` + `Junior 1` rolleri
-- 📋 Güzel embed kayıt paneli
-- 🎭 Çoklu meslek rol seçimi (Select Menu)
-- 🔄 Kayıt tamamlanınca `Kayıtsız` → `Üye` geçişi
-- 📝 Log kanalına kayıt bildirimi
-- 🛡️ Admin komutları
+![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Discord.js](https://img.shields.io/badge/Discord.js-5865F2?style=for-the-badge&logo=discord&logoColor=white)
+![Railway](https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white)
+
+</div>
 
 ---
 
-## Kurulum
+## 🤖 `Thomas Bot (Matrix)`
 
-### 1. Gereksinimler
-- Node.js v18 veya üzeri
-- Discord bot token
+Thomas, Discord sunucusu için geliştirilmiş, yüksek performanslı ve tam otomatik bir kayıt/yönetim botudur. Modern **Discord.js v14** yapısı üzerine inşa edilmiştir ve Slash Commands (`/`) destekler.
 
-### 2. Paketleri kur
+> *"Welcome to the real world."*
+
+---
+
+## ⚙️ Özellikler / Features
+
+- 🛡️ **Otomatik Kayıt:** Kullanıcıları doğrulama adımlarından geçirerek uygun rolleri verir.
+- ⚡ **Slash Commands:** Modern `/` komut altyapısı ile kolay kullanım.
+- 🚄 **Railway Deployment:** 7/24 bulut ortamında kesintisiz çalışma.
+- 🔒 **Güvenli:** Çevre değişkenleri (`.env`) ile token güvenliği.
+
+---
+
+## 🏗️ Tech Stack
+
+- **Runtime:** Node.js (v18+)
+- **Library:** Discord.js v14
+- **Environment:** `dotenv`
+- **Hosting:** Railway (Procfile & railway.toml yapılandırması mevcut)
+
+---
+
+## 🚀 Kurulum / Setup
+
+Botu kendi ortamınızda çalıştırmak için:
+
+### 1. Repoyu Klonlayın
+```bash
+git clone https://github.com/Kayra-ML/thomas.git
+cd thomas
+```
+
+### 2. Bağımlılıkları Yükleyin
 ```bash
 npm install
 ```
 
-### 3. Discord'da Rolleri Oluştur
-Aşağıdaki rolleri Discord sunucunda manuel oluştur:
-| Rol Adı | Açıklama |
-|---|---|
-| `Kayıtsız` | Sunucuya yeni katılanlara otomatik verilir |
-| `Junior 1` | Sunucuya yeni katılanlara otomatik verilir |
-| `Üye` | Kayıt tamamlanınca verilir |
-| `Web Designer` | Meslek rolü |
-| `Game Designer` | Meslek rolü |
-| `Backend Developer` | Meslek rolü |
-| `Frontend Developer` | Meslek rolü |
-| `Mobile Developer` | Meslek rolü |
-| `UI/UX Designer` | Meslek rolü |
-| `Content Creator` | Meslek rolü |
-| `Other` | Meslek rolü |
-
-### 4. .env Dosyasını Doldur
-`.env` dosyasını aç ve tüm ID'leri gir:
-
+### 3. Ortam Değişkenlerini Ayarlayın
+`.env.example` dosyasını kopyalayıp `.env` adıyla kaydedin ve içini doldurun:
 ```env
-DISCORD_TOKEN=gerçek_bot_tokenin
-CLIENT_ID=botun_application_id
-GUILD_ID=sunucunun_id
-
-KAYIT_KANAL_ID=kayit_kanalinin_id
-LOG_KANAL_ID=log_kanalinin_id
-GIRIS_KANAL_ID=giris_kanalinin_id
-
-KAYITSIZ_ROL_ID=kayitsiz_rolunun_id
-JUNIOR1_ROL_ID=junior1_rolunun_id
-UYE_ROL_ID=uye_rolunun_id
-
-ROL_WEB_DESIGNER=web_designer_rol_id
-ROL_GAME_DESIGNER=game_designer_rol_id
-ROL_BACKEND_DEV=backend_dev_rol_id
-ROL_FRONTEND_DEV=frontend_dev_rol_id
-ROL_MOBILE_DEV=mobile_dev_rol_id
-ROL_UIUX_DESIGNER=uiux_designer_rol_id
-ROL_CONTENT_CREATOR=content_creator_rol_id
-ROL_OTHER=other_rol_id
+DISCORD_TOKEN=sizin_bot_tokeniniz
+CLIENT_ID=bot_id_numaraniz
+GUILD_ID=sunucu_id_numaraniz
+# ...diğer ayarlar
 ```
 
-> **ID nasıl kopyalanır?**
-> Discord'da Geliştirici Modu açık olmalı (Ayarlar → Gelişmiş → Geliştirici Modu).
-> Ardından rol/kanal/sunucuya sağ tık → **ID'yi Kopyala**.
-
-### 5. Slash Komutlarını Kaydet
+### 4. Komutları Discord'a Yükleyin (Slash Commands)
 ```bash
 npm run deploy
 ```
 
-### 6. Botu Başlat
+### 5. Botu Başlatın
 ```bash
 npm start
-```
-
-Geliştirme için (değişikliklerde otomatik yeniden başlar):
-```bash
+# veya geliştirme modu için:
 npm run dev
 ```
 
 ---
 
-## Discord Bot İzinleri
+## ☁️ Deployment
 
-Bot'un aşağıdaki izinlere sahip olması gerekir:
-- `Manage Roles` — Rol atama/kaldırma
-- `Send Messages` — Mesaj gönderme
-- `Embed Links` — Embed gönderme
-- `Read Message History` — Geçmiş okuma
-- `View Channels` — Kanalları görme
+Bu proje doğrudan **Railway** üzerinde çalışmaya hazırdır. 
+`railway.toml` ve `Procfile` dosyaları önceden yapılandırılmıştır. Tek yapmanız gereken repoyu Railway'e bağlamak ve ortam değişkenlerini eklemektir.
 
-> ⚠️ Bot rolü, yönettiği tüm rollerden **daha yüksekte** olmalı!
-
-### OAuth2 Davet Linki İzinleri
-Bot'u sunucuya eklerken şu scope'ları seç:
-- `bot`
-- `applications.commands`
-
----
-
-## Slash Komutları
-
-| Komut | Açıklama | Yetki |
-|---|---|---|
-| `/setup-kayit` | Kayıt panelini kanala gönderir | Yönetici |
-| `/kayitsizlar` | Kayıtsız üye listesini gösterir | Yönetici |
-
----
-
-## Kayıt Akışı
-
-```
-Kullanıcı Katılır
-       ↓
-Junior 1 + Kayıtsız rolleri otomatik verilir
-       ↓
-#kayıt kanalında hoşgeldin mesajı (30sn sonra silinir)
-       ↓
-Kullanıcı "Kayıt Ol" butonuna basar
-       ↓
-Meslek seçim menüsü açılır (sadece kendisi görür)
-       ↓
-Rolleri seçer → "Tamamla" butonuna basar
-       ↓
-Kayıtsız rolü kaldırılır
-Üye rolü eklenir
-Seçilen meslek rolleri eklenir
-Log kanalına bildirim gider
-```
-
----
-
-## Proje Yapısı
-
-```
-discord-kayit-botu/
-├── src/
-│   ├── index.js                 # Bot giriş noktası
-│   ├── config.js                # Tüm ID ve sabitler
-│   ├── events/
-│   │   ├── ready.js             # Bot hazır eventi
-│   │   ├── guildMemberAdd.js    # Otomatik rol atama
-│   │   └── interactionCreate.js # Buton/menu/komut handler
-│   ├── commands/
-│   │   ├── setupKayit.js        # /setup-kayit
-│   │   └── kayitsizlar.js       # /kayitsizlar
-│   └── utils/
-│       ├── embedBuilder.js      # Embed oluşturucular
-│       └── registerHandler.js   # Kayıt iş mantığı
-├── deploy-commands.js           # Slash komut yükleme scripti
-├── .env                         # Gizli bilgiler (Git'e ekleme!)
-├── .env.example                 # Örnek .env şablonu
-├── .gitignore
-└── package.json
-```
+<div align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:00ff41,100:000000&height=120&section=footer" />
+</div>
