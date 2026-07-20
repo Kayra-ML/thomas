@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:00ff41,100:000000&height=200&section=header&text=Thomas%20Bot&fontSize=70&fontColor=00ff41&fontAlignY=38&desc=Discord%20Registration%20%26%20Automation&descAlignY=55&descAlign=50&animation=twinkling" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:00ff41,100:000000&height=200&section=header&text=Thomas%20Bot&fontSize=70&fontColor=00ff41&fontAlignY=38&desc=Discord%20Registration%20and%20Automation&descAlignY=55&descAlign=50&animation=twinkling" />
 
 <br/>
 
